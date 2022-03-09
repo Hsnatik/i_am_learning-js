@@ -66,3 +66,100 @@ console.log(x); //5
 
 let y = 2;
 console.log(++y) //3
+
+let val;
+val = isNaN("10"); //false
+val = isNaN("a10"); //true
+console.log(val);
+console.log(typeof val); //NaN döngünü sınıyor.
+
+let num = 10.13458769;
+val = num.toPrecision(5); //10.135 ---> (5)sayının kaç rakam alacağını belirtir. son rakamı yuvarlar.
+console.log(val);
+val = num.toFixed(2); //10.13 ---> (2) virgülden sonra kaç rakam alacağını belirler.
+console.log(val);
+
+val = Math.ceil(2.1) // 3
+console.log(val);
+
+val = Math.floor(2.9) // 2
+console.log(val);
+
+val = Math.round(2.2); // 2
+console.log(val);
+
+val = Math.round(2.8); // 3
+console.log(val);
+
+val = Math.random(); // 0-1 arası random sayı
+console.log(val);
+
+val = Math.floor(Math.random()*10); //0-9 arası random sayı + floor(aşağı yuvarlama)
+console.log(val);
+
+val = Math.pow(2,4); // 2^4 =16
+console.log(val);
+
+val = Math.abs(-100); // +100
+console.log(val);
+
+val = Math.min(1,5,7,75,25,4,3); //1
+console.log(val);
+
+val = Math.max(1,5,7,75,25,4,3); //25
+console.log(val);
+
+
+
+
+
+let sayi = 12.17846529
+
+// toplamda 3 basamaklı sayı kullan
+
+/*sayi = sayi.toPrecision(3);
+console.log(sayi);*/
+
+// ondalık kısmı 3 basamakta sınırla
+val = sayi.toFixed(3);
+console.log(val);
+
+// en yakın sayıya yuvarla
+sayi = Math.round(12.17846529);
+console.log(sayi);
+
+// aşağı yuvarla
+sayi=Math.floor(12.17846529);
+console.log(sayi);
+
+
+// 1,2,10,56,20 sayılarından en küçüğü ve en büyüğünü bul
+sayi = Math.min(1,2,10,56,20);
+console.log(sayi);
+
+sayi = Math.max(1,2,10,56,20);
+console.log(sayi);
+
+// sayı aralığını kullanıcının belirleyeceği rastgele bir sayı üretin.
+ //sayı aralığı 50 ila 75 olsun...
+let min = 50;
+let max = 75;
+sayi = (min+Math.random()*(max-min));
+console.log(sayi);
+
+/* Bir personelin yaptığı mesai'ye göre aldığı maaşı hesaplayalım.
+   ** Brüt maaş  : 3700 TL
+   ** Brüt mesai : 10.3 TL
+   Ağustos ayı mesai toplamı 42 saat ise toplam brüt maaş nedir ?
+   Brüt maaş üzerinden toplam kesinti oranı %25 ise alınacak toplam net maaş nedir ?
+*/
+
+let brutMaas = 3700;
+let mesaiUcreti = 10.3;
+let mesaiSuresi = 42;
+
+let toplamBrutMaas = brutMaas + (mesaiUcreti*mesaiSuresi);
+
+let toplamNetMaas = toplamBrutMaas - toplamBrutMaas*0.25
+
+console.log(toplamBrutMaas.toFixed(2),toplamNetMaas.toFixed(2));
