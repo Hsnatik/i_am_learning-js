@@ -74,6 +74,8 @@ console.log(val2); //bir den fazla değer bulur.
 
 //-----------------------------------------------------------------------------
 
+
+
 let april = ["apple","huawei","xiaomi","samsung"];
 
 console.log(april);
